@@ -1,11 +1,19 @@
+import React, { useState } from "react";
 import "./Button.css";
-import { Link } from "react-router-dom";
-import React from "react";
+import Quote from "../QuoteForm/Quote";
 
-export function Button() {
+function Button() {
+	const [showModal, setShowModal] = useState(false);
+	const openModal = () => {
+		setShowModal((prev) => !prev);
+	};
 	return (
-		<Link to="/Menu">
-			<button className="btn">Get Quote</button>
-		</Link>
+		<div className="ctForm">
+			<button onClick={openModal} className="btn">
+				Get Quote
+			</button>
+			<Quote showModal={showModal} setShowModal={setShowModal}></Quote>
+		</div>
 	);
 }
+export default Button;

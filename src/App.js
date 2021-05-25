@@ -7,10 +7,10 @@ import Home from "./components/Home/index.js";
 import ShellFish from "./components/Pages/Shell";
 import Sides from "./components/Pages/Sides";
 import Fresh from "./components/Pages/Fresh";
-import Contact from "./components/Pages/Contact";
-import GetQuote from "./components/Pages/GetQuote";
+import Contact from "./components/Contact/Contact";
 import Cooking from "./components/Pages/Cooking";
 import NotificationBar from "./components/NotiBar/NotiBar";
+import FooterBar from "./components/footerBar/footer";
 
 function App() {
 	return (
@@ -24,9 +24,9 @@ function App() {
 				<Route path="/Sides" exact component={Sides} />
 				<Route path="/Fresh" exact component={Fresh} />
 				<Route path="/Contact" exact component={Contact} />
-				<Route path="/GetQuote" exact component={GetQuote} />
 				<Route path="/Cooking" exact component={Cooking} />
 			</Switch>
+			<FooterBar></FooterBar>
 		</Router>
 	);
 }

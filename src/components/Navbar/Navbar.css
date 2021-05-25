@@ -1,20 +1,32 @@
 .navbar {
 	background: #fff;
 	height: 100px;
+	width: 100%;
 	display: flex;
 	justify-content: center;
+	position: fixed;
+	top: 40px;
 	align-items: center;
 	font-size: 1.2rem;
 	box-shadow: 1px 1px 10px black;
 	overflow: hidden;
+	z-index: 3000;
 }
+
+.btn {
+	position: absolute;
+	top: 50px;
+	right: calc(50% - 450px);
+	position: fixed;
+}
+
 .navbar.active {
 	background-color: #0089c0;
 }
 
 .navbar-logo {
 	background-color: #fff;
-	position: absolute;
+	position: fixed;
 	text-decoration: none;
 	left: calc(50% - 400px);
 	height: 90px;
@@ -26,7 +38,7 @@
 
 .nav-menu {
 	display: grid;
-	position: absolute;
+	position: fixed;
 	grid-template-columns: repeat(5, auto);
 	grid-gap: 10px;
 	list-style: none;
@@ -34,6 +46,7 @@
 	width: auto;
 	justify-content: center;
 	margin-right: 2rem;
+	z-index: 100;
 }
 
 .nav-item {
@@ -63,39 +76,47 @@
 	display: none;
 	position: absolute;
 }
+.footer {
+	position: fixed;
+	bottom: 20px;
+	background-color: rgb(12, 49, 134);
+}
 
 @media screen and (max-width: 960px) {
 	.navbar {
+		top: 20px;
 		height: 70px;
+		transition: all 0.5s ease;
+		z-index: 10000;
 	}
+
 	.nav-menu {
-		display: flex;
-		flex-direction: column;
-		top: 110px;
+		display: table-column;
+		top: 90px;
 		left: -100%;
 		opacity: 1;
-		transition: all 0.5s ease;
-		bottom: 0px;
 	}
 
 	.nav-menu.active {
-		background: #fff;
+		background: #1d262f;
 		width: 100%;
 		position: flex;
 		left: 0;
 		opacity: 1;
 		transition: all 0.5s ease;
-		box-shadow: 1px 1px 4px black;
 		height: 100%;
+		top: 90px;
+		z-index: 2000;
+		overflow: hidden;
 	}
-	.button.active {
-		display: none;
-	}
+
 	.nav-links {
 		width: 100%;
-		display: table;
+		position: auto;
+		height: 0px;
 		font-size: 25px;
 		align-items: baseline;
+		color: white;
 	}
 
 	.nav-links:hover {
@@ -105,11 +126,11 @@
 	.menu-icon {
 		border-color: #0089c0;
 		display: block;
-		position: absolute;
+		position: fixed;
 		transform: translate(-100%, 60%);
 		font-size: 1.8rem;
 		cursor: pointer;
-		top: 45px;
+		top: 20px;
 		left: 90px;
 	}
 
@@ -149,9 +170,12 @@
 	}
 	.horizontal {
 		width: 80vw;
-		margin-right: 5%;
-		margin-left: 10%;
+		margin: 50px 20px 20px 10%;
 		position: absolute;
-		margin-top: 400px;
+	}
+}
+@media screen and (max-height: 750px) {
+	.btn.active {
+		top: calc(50% + 220px);
 	}
 }

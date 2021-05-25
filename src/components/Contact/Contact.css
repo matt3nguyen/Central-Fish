@@ -1,0 +1,136 @@
+.main {
+	position: absolute;
+	display: block;
+	background-color: white;
+	font-family: "Alegreya Sans", sans-serif;
+	font-weight: 900;
+	top: 170px;
+	display: block;
+	left: calc(50% - 80px);
+	color: orange;
+	font-size: 50px;
+	z-index: 50;
+}
+.maps {
+	position: absolute;
+	top: calc(50% - 100px);
+	margin: 0px 20px 0px 20px;
+	right: 0;
+	width: 48%;
+	height: 500px;
+}
+.information {
+	display: flex;
+	position: absolute;
+	margin: 0px 20px 0px 20px;
+	height: 500px;
+	width: 48%;
+	background-color: rgb(12, 49, 134);
+	top: calc(50% - 100px);
+	text-align: center;
+	overflow: visible;
+}
+.contact {
+	display: flex;
+	font-family: "Alegreya Sans", sans-serif;
+	position: relative;
+	flex-direction: column;
+	top: 50px;
+	font-weight: 700;
+	font-size: 35px;
+	color: #fff;
+	width: 35%;
+}
+.info {
+	font-size: 20px;
+	font-weight: 400;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.button1 {
+	color: #fff;
+	font-family: initial;
+	font-weight: 300;
+	font-size: 15px;
+	padding: 10px 20px 10px 20px;
+	margin: 20px 15px 0px 15px;
+	width: 80%;
+}
+.information > hr {
+	margin: 50px 0px 50px 0px;
+}
+.ctu {
+	display: block;
+	position: absolute;
+	top: 900px;
+	left: 300px;
+	color: red;
+	font-size: 30px;
+}
+
+@media screen and (max-width: 960px) {
+	.maps {
+		width: 100%;
+		right: unset;
+		margin: unset;
+		height: 300px;
+	}
+	.main {
+		top: 150px;
+		font-size: 30px;
+		left: calc(50% - 35px);
+	}
+	.information {
+		top: calc(50% + 220px);
+		width: 80%;
+		height: 300px;
+		left: 10vw;
+		margin: unset;
+	}
+	.contact {
+		font-size: 15px;
+		top: 20px;
+	}
+	.info {
+		font-size: smaller;
+	}
+	.button1 {
+		font-size: smaller;
+		padding: 10px 15px 10px 15px;
+		margin: 15px 0px 0px 15px;
+	}
+}
+@media screen and (max-width: 520px) {
+	.information {
+		background-color: transparent;
+		align-items: center;
+		top: calc(50% + 220px);
+		width: 90%;
+		height: 300px;
+		left: 5vw;
+		margin: unset;
+		display: flex;
+		flex-direction: column;
+		color: black;
+	}
+	.contact {
+		color: black;
+		text-indent: 2px;
+	}
+	.info {
+		color: black;
+	}
+	.information > hr {
+		margin: 30px 0px 0px 0px;
+		width: 50%;
+		position: relative;
+	}
+	.button1 {
+		font-size: smaller;
+		padding: 5px 10px 5px 10px;
+		margin: 15px 0px 0px 15px;
+	}
+}

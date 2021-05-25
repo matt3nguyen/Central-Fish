@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Dropdown from "../Dropdown/Dropdown";
 import Logo from "../../images/Logo.svg";
+import Button from "../Button/Button";
 
 function Navbar() {
 	const [click, setClick] = useState(false);
@@ -45,9 +45,7 @@ function Navbar() {
 				<div className="menu-icon" onClick={handleClick}>
 					<i className={click ? "fas fa-times" : "fas fa-bars"}></i>
 				</div>
-				<div className={click ? "button active" : "button"}>
-					<Button className="button"></Button>
-				</div>
+
 				<ul className={click ? "nav-menu active" : "nav-menu"}>
 					<li className="nav-item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 						<Link to="/Menu" className="nav-links" onClick={closeMobileMenu}>
@@ -73,6 +71,12 @@ function Navbar() {
 						</Link>
 					</li>
 					<hr className="horizontal"></hr>
+					<li>
+						<Link to="/directions"></Link>
+					</li>
+					<li>
+						<Button></Button>
+					</li>
 				</ul>
 			</nav>
 		</>

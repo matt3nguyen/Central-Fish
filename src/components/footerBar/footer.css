@@ -1,0 +1,53 @@
+.footer {
+	position: absolute;
+	top: 100%;
+	background-color: black;
+	height: 200px;
+	width: 100%;
+	color: #fff;
+	overflow: hidden;
+	z-index: 1000;
+}
+#copyr {
+	position: absolute;
+	left: calc(50% - 130px);
+	top: 85%;
+	font-family: sans-serif;
+	color: rgb(139, 139, 139);
+	font-size: 12px;
+}
+#location {
+	font-size: 30px;
+	position: relative;
+	bottom: 5px;
+	color: rgb(155, 12, 8);
+}
+#fa {
+	color: rgb(24, 121, 231);
+}
+#ins {
+	color: rgb(238, 50, 144);
+}
+#yelp {
+	color: rgb(243, 49, 49);
+}
+.media {
+	display: flex;
+	position: relative;
+	font-size: 15px;
+	text-indent: 10px;
+	left: calc(50% - 90px);
+	top: 20px;
+}
+.list {
+	position: relative;
+	top: 30px;
+	text-align: center;
+	list-style: none;
+	color: rgb(158, 154, 154);
+	margin: 3px;
+}
+
+.list > a:hover {
+	text-decoration: line-through;
+}
