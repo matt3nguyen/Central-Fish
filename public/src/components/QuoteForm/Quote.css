@@ -1,0 +1,36 @@
+.ctForm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	position: fixed;
+	top: 200px;
+	z-index: 30000;
+}
+.cf {
+	margin: 0.8em auto;
+	font-family: inherit;
+	text-transform: inherit;
+	font-size: inherit;
+
+	display: block;
+	width: 280px;
+	padding: 0.4em;
+	z-index: 3000;
+}
+.cf > textarea {
+	height: 80px;
+	resize: none;
+}
+
+.formBtn {
+	width: 140px;
+	display: inline-block;
+
+	background: teal;
+	color: #fff;
+	font-weight: 100;
+	font-size: 1.2em;
+	border: none;
+	height: 30px;
+}
