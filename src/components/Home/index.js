@@ -4,7 +4,7 @@ import Hero from "./Hero";
 function Home() {
 	return (
 		<Router>
-			<Hero />
+		<Hero></Hero>
 		</Router>
 	);
 }

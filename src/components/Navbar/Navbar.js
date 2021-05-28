@@ -1,60 +1,69 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import Dropdown from "../Dropdown/Dropdown";
+
 import Logo from "../../images/Logo.svg";
 import Button from "../Button/Button";
 
 function Navbar() {
 	const [click, setClick] = useState(false);
-	const [dropdown, setDropdown] = useState(false);
+	const [Blind, setBlind] = useState(false);
 	const handleClick = () => setClick(!click);
 	const closeMobileMenu = () => setClick(false);
-	const [navbar, setNavbar] = useState(false);
+	const [Navbar, setNavbar] = useState(false);
 
+	
 	const onMouseEnter = () => {
-		if (window.innerWidth < 960) {
-			setDropdown(false);
+		if(window.innerWidth > 960){
+			setBlind(false);
 		} else {
-			setDropdown(true);
+			setBlind(true)
 		}
 	};
-	const onMouseLeave = () => {
-		if (window.innerWidth < 960) {
-			setDropdown(false);
-		} else {
-			setDropdown(false);
-		}
+		const onMouseLeave = () => {
+			if(window.innerWidth > 960){
+				setBlind(true);
+			} else {
+				setBlind(false)
+			}	
+	
 	};
 	const changeIcon = () => {
+	if(window.innerWidth > 960) {
 		if (window.scrollY >= 10) {
-			setNavbar(true);
-		} else {
 			setNavbar(false);
+		} else {
+			setNavbar(true);
 		}
+	}
 	};
 
 	window.addEventListener("scroll", changeIcon);
 
 	return (
 		<>
-			<nav className="navbar">
+			<nav className= "navbar">
 				<Link to="/" className="navbar-logo">
 					<img src={Logo} alt="logo"></img>
 				</Link>
 				<div className="menu-icon" onClick={handleClick}>
 					<i className={click ? "fas fa-times" : "fas fa-bars"}></i>
 				</div>
-
+			 <div className={Navbar? "blindbar" : "blindbar active" }><i className="fas fa-bars" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} ></i></div>
+		{Blind && <div className="test"/>}
+ 
+			
+			
 				<ul className={click ? "nav-menu active" : "nav-menu"}>
-					<li className="nav-item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+					<li className="nav-item" >
 						<Link to="/Menu" className="nav-links" onClick={closeMobileMenu}>
-							Menu <i className="fas fa-caret-down" />
+							Menu 
 						</Link>
-						{dropdown && <Dropdown />}
+						
 					</li>
+					
 					<li className="nav-item">
-						<Link to="/About" className="nav-links" onClick={closeMobileMenu}>
+						<Link to="/" className="nav-links" onClick={closeMobileMenu}>
 							Updates
 						</Link>
 					</li>
@@ -78,6 +87,7 @@ function Navbar() {
 						<Button></Button>
 					</li>
 				</ul>
+			
 			</nav>
 		</>
 	);

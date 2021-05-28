@@ -4,7 +4,7 @@ import "./Contact.css";
 export default function Contact() {
 	return (
 		<body className="contact-us">
-			<>
+			<header>
 				<h1 className="main">
 					Contact
 					<hr />
@@ -18,7 +18,8 @@ export default function Contact() {
 					allowfullscreen=""
 					loading="lazy"
 				></Iframe>
-			</>
+			</header>
+			<>
 			<div>
 				<div className="information">
 					<p className="contact">
@@ -59,6 +60,7 @@ export default function Contact() {
 					</p>
 				</div>
 			</div>
+			</>
 		</body>
 	);
 }

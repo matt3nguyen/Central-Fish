@@ -1,22 +1,27 @@
 export const MenuItems = [
 	{
-		title: "Fresh Fish and Fillets",
-		path: "/Fresh",
+		title: "Fresh Fish",
+		path: "Fresh",
 		cName: " dropdown-link",
 	},
 	{
+		title: "Fillets",
+		path: "Fillet",
+		cName: " dropdown-link",	
+	},
+	{
 		title: "Shell Fish",
-		path: "/Shell",
+		path: "Shell",
 		cName: " dropdown-link",
 	},
 	{
 		title: "Cooking prices",
-		path: "/Cooking",
+		path: "Cooking",
 		cName: " dropdown-link",
 	},
 	{
 		title: "Sides",
-		path: "/Sides",
+		path: "Sides",
 		cName: " dropdown-link",
 	},
 ];

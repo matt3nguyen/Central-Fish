@@ -1,6 +1,6 @@
 .navbar {
 	background: #fff;
-	height: 100px;
+	height: 90px;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -8,17 +8,47 @@
 	top: 40px;
 	align-items: center;
 	font-size: 1.2rem;
-	box-shadow: 1px 1px 10px black;
+	box-shadow: 0px 0px 3px rgb(173, 172, 172);
 	overflow: hidden;
 	z-index: 3000;
 }
 
-.btn {
-	position: absolute;
-	top: 50px;
-	right: calc(50% - 450px);
+
+.blindbar.active {
+	
 	position: fixed;
+	width: 25%;
+	height: 27px;
+	align-items: center;
+	background-color:rgb(255, 255, 255);
+	top: 65px;
+	display: grid;
+	position: fixed;
+	justify-content: center;
+	margin-right: 2rem;
+	z-index: 3000;
+	
 }
+.blindbar {
+	transition: all 0.5s ease-in-out;
+	display: none;
+
+}
+.drop{
+	background-color: rgb(0, 0, 0);
+	display: flex;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	padding-top: 40px;
+	padding-left: 35%;
+	position: absolute;
+	width: 100%;
+	height: 120px;
+	z-index: 1;
+	box-shadow: 0px 0px 3px rgb(173, 172, 172);
+}
+
 
 .navbar.active {
 	background-color: #0089c0;
@@ -30,11 +60,13 @@
 	text-decoration: none;
 	left: calc(50% - 400px);
 	height: 90px;
-	z-index: 300;
+	z-index: 3000;
 }
 .navbar-logo:hover {
-	transform: scale(1.01);
+	transform: scale(0.95);
+	transition: all 0.5s;
 }
+
 
 .nav-menu {
 	display: grid;
@@ -43,17 +75,26 @@
 	grid-gap: 10px;
 	list-style: none;
 	text-align: center;
-	width: auto;
+	width: 100%;
 	justify-content: center;
 	margin-right: 2rem;
-	z-index: 100;
+	z-index: 240;
+
 }
 
 .nav-item {
 	display: flex;
 	align-items: center;
-	height: 80px;
+	height: 110px;
+	width: 100%;
 	padding-left: 20px;
+	z-index: 200;
+}
+
+.horizontal {
+	
+	margin: 20px 0px 10px 0px;
+	z-index: 250;
 }
 
 .nav-links {
@@ -61,6 +102,7 @@
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	font-size: 18px;
+	z-index: 3000;
 }
 
 .nav-links:hover {
@@ -76,10 +118,12 @@
 	display: none;
 	position: absolute;
 }
-.footer {
+.btn {
+	position: absolute;
+	top: 50px;
+	right: calc(50% - 450px);
 	position: fixed;
-	bottom: 20px;
-	background-color: rgb(12, 49, 134);
+	z-index: 3000;
 }
 
 @media screen and (max-width: 960px) {
@@ -106,7 +150,7 @@
 		transition: all 0.5s ease;
 		height: 100%;
 		top: 90px;
-		z-index: 2000;
+		z-index: 100;
 		overflow: hidden;
 	}
 

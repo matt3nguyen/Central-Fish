@@ -1,3 +1,10 @@
+.contact-us {
+	background-color: transparent;
+	height: 100vh;
+	max-height: 100%;
+	width: 100%;
+
+}
 .main {
 	position: absolute;
 	display: block;
