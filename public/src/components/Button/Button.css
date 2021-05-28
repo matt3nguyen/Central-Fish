@@ -1,0 +1,82 @@
+.btn {
+	font-size: 15px;
+	color: black;
+	cursor: pointer;
+	z-index: 2000;
+}
+
+.contactForm {
+	display: flex;
+	background-color: #fff;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
+	width: 400px;
+	left: calc(50% - 200px);
+	position: fixed;
+	top: 200px;
+	z-index: 3000;
+}
+.contactForm > h1 {
+	background-color: transparent;
+	color: orange;
+}
+.cf {
+	margin: 0.8em auto;
+	font-family: inherit;
+	text-transform: inherit;
+	font-size: inherit;
+	display: flex;
+	flex-direction: column;
+	width: 280px;
+	padding: 0.4em;
+	z-index: 3000;
+}
+.cf > input {
+	margin: 10px 0px 10px 0px;
+}
+.cf > textarea {
+	height: 80px;
+	width: 200px;
+	resize: none;
+}
+
+.formBtn {
+	width: 100px;
+	display: flex;
+	background: teal;
+	color: #fff;
+	font-weight: 100;
+	font-size: 1.2em;
+	border: none;
+	height: 30px;
+}
+@media screen and (max-width: 960px) {
+	.btn {
+		color: #0089c0;
+		background-color: transparent;
+		background-image: none;
+		display: flex;
+		position: fixed;
+		cursor: pointer;
+		top: 30px;
+		right: 0px;
+		transform: none;
+		transition: none;
+	}
+
+	.btn:hover {
+		color: #0089c0;
+	}
+	.btn.active {
+		transform: none;
+		transition: none;
+		top: calc(50% + 100px);
+		left: calc(50% - 90px);
+		align-items: center;
+		background-image: linear-gradient(to right, #d31027 0%, #ea384d 51%, #d31027 100%);
+		color: white;
+		z-index: 2000;
+	}
+}
