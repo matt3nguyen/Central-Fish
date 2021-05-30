@@ -30,19 +30,15 @@ export const Column1 = styled.div `
     margin-top: 200px;
     background-color: pink;
     padding: 10px 15px;
-    grid-area: 1/1/ span 1 / span 2;
+    grid-area: 1/1/ span 1 / span 1;
 `
-export const Column2 = styled.div `
+export const Column2 = styled.ul `
     background-color: green;
     padding: 10px 15px;
+    list-style: none;
+    text-align: left;
     grid-area: 2/1 ;
-    height: 600px;
-`
-export const Column3 = styled.div `
-    height: 600px;
-    background-color: white;
-    padding: 10px 15px;
-    grid-area: 2/2 ;
+    height: 100%;
 `
 
 export const TextWraper = styled.div` 
@@ -54,6 +50,7 @@ export const TextWraper = styled.div`
 export const Heading = styled.h1 `
     text-align: center;
     font-size: 48px;
+    padding-bottom: 30px;
     line-height:1.1 ;
     font-weight: 600;
     color: red;
