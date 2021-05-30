@@ -49,8 +49,8 @@ function Navbar() {
 				<div className="menu-icon" onClick={handleClick}>
 					<i className={click ? "fas fa-times" : "fas fa-bars"}></i>
 				</div>
-			 <div className={Navbar? "blindbar" : "blindbar active" }><i className="fas fa-bars" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} ></i></div>
-		{Blind && <div className="test"/>}
+			{/*<div className={Navbar? "blindbar" : "blindbar active" }><i className="fas fa-bars" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} ></i></div>
+		{Blind && <div className="test"/>}*/}
  
 			
 			
