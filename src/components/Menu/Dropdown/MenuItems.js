@@ -15,6 +15,11 @@ export const MenuItems = [
 		cName: " dropdown-link",
 	},
 	{
+		title: "Special Items",
+		path: "Special",
+		cName: " dropdown-link",
+	},
+	{
 		title: "Cooking prices",
 		path: "Cooking",
 		cName: " dropdown-link",
