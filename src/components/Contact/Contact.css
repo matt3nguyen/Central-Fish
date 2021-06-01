@@ -1,7 +1,6 @@
 .contact-us {
 	background-color: transparent;
-	height: 100vh;
-	max-height: 100%;
+	height: 150vh;
 	width: 100%;
 
 }
@@ -20,7 +19,7 @@
 }
 .maps {
 	position: absolute;
-	top: calc(50% - 100px);
+	top: calc(50% - 50px);
 	margin: 0px 20px 0px 20px;
 	right: 0;
 	width: 48%;
@@ -33,7 +32,7 @@
 	height: 500px;
 	width: 48%;
 	background-color: rgb(12, 49, 134);
-	top: calc(50% - 100px);
+	top: calc(50% - 50px);
 	text-align: center;
 	overflow: visible;
 }
@@ -79,6 +78,7 @@
 }
 
 @media screen and (max-width: 960px) {
+	
 	.maps {
 		width: 100%;
 		right: unset;
@@ -91,7 +91,7 @@
 		left: calc(50% - 35px);
 	}
 	.information {
-		top: calc(50% + 220px);
+		top: calc(50% + 260px);
 		width: 80%;
 		height: 300px;
 		left: 10vw;
@@ -99,7 +99,7 @@
 	}
 	.contact {
 		font-size: 15px;
-		top: 20px;
+		top: 50px;
 	}
 	.info {
 		font-size: smaller;
@@ -126,14 +126,13 @@
 	.contact {
 		color: black;
 		text-indent: 2px;
+		margin-bottom: 20px;
 	}
 	.info {
 		color: black;
 	}
 	.information > hr {
-		margin: 30px 0px 0px 0px;
-		width: 50%;
-		position: relative;
+		display: none;
 	}
 	.button1 {
 		font-size: smaller;

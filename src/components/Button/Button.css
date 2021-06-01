@@ -58,9 +58,9 @@
 		background-color: transparent;
 		background-image: none;
 		display: flex;
-		position: fixed;
+		position: absolute;
 		cursor: pointer;
-		top: 30px;
+		top: 20px;
 		right: 0px;
 		transform: none;
 		transition: none;
@@ -69,14 +69,12 @@
 	.btn:hover {
 		color: #0089c0;
 	}
-	.btn.active {
-		transform: none;
-		transition: none;
-		top: calc(50% + 100px);
-		left: calc(50% - 90px);
-		align-items: center;
-		background-image: linear-gradient(to right, #d31027 0%, #ea384d 51%, #d31027 100%);
-		color: white;
-		z-index: 2000;
-	}
+	
 }
+@media screen and (max-width: 500px) {
+	.btn {
+		font-size: 0.8rem;
+	}
+
+}
+

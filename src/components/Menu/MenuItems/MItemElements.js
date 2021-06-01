@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+
 export const InfoContainer = styled.div `
 	height: max-content;
     @media screen and (max-width:960px) {
@@ -7,34 +8,49 @@ export const InfoContainer = styled.div `
     } 
 `
 
+
 export const InforWraper = styled.div `
     display: grid;
     background-color: transparent;
-
-    width: 100%;
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
     padding: 0 24px;
     justify-content: center;
+    @media screen and (max-width: 600px) {
+		font-size: 10px;
+        justify-content: center;
+    }
 `
 
 export const InfoRow = styled.div`   
     display:grid;
     grid-auto-columns: minmax(auto, 1fr);
+    @media screen and (max-width: 960px) {
+        font-size: smaller;
+    }
 
 `
 export const Column1 = styled.div `
-    margin-top: 280px;
+    padding-top: 200px;
     grid-area: 1/1/ span 1 / span 1;
+    @media screen and (max-width: 600px) {
+		padding-top: 0px;
+    }
+
 `
 export const Column2 = styled.div `
     grid-area: 2/1 ;
     height: 100%;
+    padding-bottom: 100%;
+    @media screen and (max-width: 600px) {
+		padding-bottom: 0px;
+    }
+
 `
 
 export const TextWraper = styled.div` 
-    max-width: 540px;
+    max-width: 100%;
     padding-top: 0;
     padding-bottom: 60px;
 

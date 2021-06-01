@@ -8,7 +8,6 @@ import {
 const MenuItems = ({id ,headline, description,list}) => {
     return (
         <>
-        <Dropdown></Dropdown>
         <InfoContainer id={id} >
             <InforWraper>
                 <InfoRow>

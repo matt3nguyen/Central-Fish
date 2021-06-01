@@ -70,13 +70,12 @@ export const MenuObjThree ={
 <li>Shrimp Large (head-less) (avg 26cts/lb) ...................................................$7.99/lb</li>
 <li>Shrimp Jumbo (head-less) (avg 16cts/lb) ..................................................$4.99/lb</li>
 <li style={{fontWeight:"bold", fontSize:"14px"}}>Shrimp will be cleaned and deveined with an extra fee of $1.50/lb </li>
-<br/>
-<hr></hr>
-<li>Live Black Mussels (2lbs bag) ..................................................$5.99/bag </li>
-<li>Frozen Green Mussels (2lbs box) ..................................................$11.99/box </li>
-<li>Live Cherry Clams ..................................................$7.99/dozen </li>
-<li>Live Oysters ..................................................$11.99/dozen </li>
-<li>Dried Scallops</li>
+<br/><hr/>
+<li>Live Black Mussels (2lbs bag) ......................................................................$5.99/bag </li>
+<li>Frozen Green Mussels (2lbs box) ...............................................................$11.99/box </li>
+<li>Live Cherry Clams .......................................................................................$7.99/dozen </li>
+<li>Live Oysters ...............................................................................................$11.99/dozen </li>
+<li>Dry Scallops .......................................................................................................$18.99/lb</li>
  </ul>]
 }
 

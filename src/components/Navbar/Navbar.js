@@ -42,8 +42,8 @@ function Navbar() {
 
 	return (
 		<>
-			<nav className= "navbar">
-				<Link to="/" className="navbar-logo">
+			<nav className= {click? 'navbar active' : 'navbar'}>
+				<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
 					<img src={Logo} alt="logo"></img>
 				</Link>
 				<div className="menu-icon" onClick={handleClick}>
@@ -51,7 +51,7 @@ function Navbar() {
 				</div>
 			{/*<div className={Navbar? "blindbar" : "blindbar active" }><i className="fas fa-bars" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} ></i></div>
 		{Blind && <div className="test"/>}*/}
- 
+		      <div onClick={closeMobileMenu} ><Button ></Button></div>
 			
 			
 				<ul className={click ? "nav-menu active" : "nav-menu"}>
@@ -84,7 +84,7 @@ function Navbar() {
 						<Link to="/directions"></Link>
 					</li>
 					<li>
-						<Button></Button>
+						
 					</li>
 				</ul>
 			

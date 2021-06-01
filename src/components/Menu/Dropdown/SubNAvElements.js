@@ -1,35 +1,64 @@
 import styled from 'styled-components'
 import { Link as LinkS } from  "react-scroll" 
 
+
+export const Topbar = styled.div ` 
+	position: static;
+	top:0; 
+	background-color: #fff;
+	height: 40px;
+	@media screen and (max-width: 960px) {
+		display: none;
+	}
+
+`
 export const SubNcontainer = styled.div `
 	background-color: #fff;
-	display: flex;
-	position: fixed;
-	top: 60px;
-	left: 0;
-	padding-top: 70px;
-	padding-left: 35%;
-	width: 100%;
-	height: 120px;
-	z-index: 1;
+	position: sticky;
+	top: 0;
+	height: 100px;
+	text-align: center;
+	padding-top: 10px;
+	
+	box-shadow: 0px 0px 3px rgb(173, 172, 172);
+	z-index: 1000;
+	@media screen and (max-width: 600px) {
+		display: none;}
 	`
 export const SubNMenu = styled.ul ` 
 	display: flex;
-	align-items: center;
+	justify-content: center;
+	font-size: 20px;
 	list-style: none;
-	text-align: center;
-	margin-right: -22px;
+	text-indent: 100px;
+	@media screen and (max-width: 1100px) {
+		text-indent: 5vw;
+	}
+	@media screen and (max-width: 730px) {
+		text-indent: 5vw;
+		width: fit-content;
+		font-size: 15px;
+		padding-top: 10px;
+		height: fit-content;
+	.icon {
+		display: none;
+	
+	}
+	
+	}
+
 `
 export const SubNItem = styled.li `
-	display: block;
+	padding-left: auto;
+	padding-right: auto;
+	
 `
 export const SubNLink = styled(LinkS) `
 	display: block;
 	color: #0089c0;
-	align-items: center;
+	width: max-content;
 	text-decoration: none;
-	padding: 10px;
-	height: 100%;
 	cursor: pointer;
+
 	`
 
