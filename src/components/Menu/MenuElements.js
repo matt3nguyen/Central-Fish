@@ -17,7 +17,6 @@ export const MenuContainer = styled.div`
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
-	margin-bottom: 200vh;
     padding: 0 24px;
     justify-content: center;
    `

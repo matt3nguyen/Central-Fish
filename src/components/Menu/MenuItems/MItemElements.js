@@ -12,7 +12,7 @@ export const InfoContainer = styled.div `
 export const InforWraper = styled.div `
     display: grid;
     background-color: transparent;
-    max-width: 1100px;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding: 0 24px;
@@ -45,6 +45,7 @@ export const Column2 = styled.div `
     padding-bottom: 100%;
     @media screen and (max-width: 600px) {
 		padding-bottom: 0px;
+        width: fit-content;
     }
 
 `
