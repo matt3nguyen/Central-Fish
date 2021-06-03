@@ -45,7 +45,7 @@ export const Column2 = styled.div `
     padding-bottom: 100%;
     @media screen and (max-width: 600px) {
 		padding-bottom: 0px;
-        width: fit-content;
+        width: screen;
     }
 
 `
