@@ -1,9 +1,9 @@
 import React from 'react'
 
 import MenuItems from './MenuItems'
-import { MenuObjOne, MenuObjThree, MenuObjTwo } from './MenuItems/Data'
+import { MenuObjFour, MenuObjOne, MenuObjThree, MenuObjTwo, MenuObjFive, MenuObjSix } from './MenuItems/Data'
 import { BrowserRouter as Router } from "react-router-dom";
-import { MenuContainer, MenuImage } from './MenuElements';
+import { MenuContainer } from './MenuElements';
 import Dropdown from './Dropdown/SubNav';
 
 
@@ -15,6 +15,9 @@ const Menu = () => {
            <MenuItems {...MenuObjOne} ></MenuItems>          
            <MenuItems {...MenuObjTwo} ></MenuItems>
            <MenuItems {...MenuObjThree}></MenuItems>
+           <MenuItems {...MenuObjFour}></MenuItems>
+           <MenuItems {...MenuObjFive}></MenuItems>
+           <MenuItems {...MenuObjSix}></MenuItems>
         </MenuContainer>
         </Router>
     )

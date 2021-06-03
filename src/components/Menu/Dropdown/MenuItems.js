@@ -23,7 +23,7 @@ export const MenuItems = [
 	},
 	{
 		title: [<GiFrozenOrb className="icon" style={{fontSize: '40px', color:"black"}}></GiFrozenOrb>,<p>Frozen Goods</p>],
-		path: "Special",
+		path: "Frozen",
 		cName: " dropdown-link",
 	},
 	{
