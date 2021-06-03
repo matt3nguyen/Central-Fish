@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Img from '../../images/APC_0212.png'
+import Img from '../../images/APC_0212.jpg'
 
 
 export const MenuImage =styled.div ` 
