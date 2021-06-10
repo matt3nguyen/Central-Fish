@@ -14,9 +14,8 @@ function App() {
 		<main>
 		<Router>
 		<header>
-			<Navbar>
-			</Navbar>
-			<NotificationBar></NotificationBar>
+			<Navbar/>
+			<NotificationBar/>
 			
 			</header>
 			

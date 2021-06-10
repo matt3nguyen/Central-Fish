@@ -1,54 +1,100 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Slider.css'
-
+import Bcrab from '../../../images/APC_0124-2.jpg'
+import fish from '../../../images/APC_0212.jpg'
+import crableg from '../../../images/APC_0317.jpg'
+import scallop from '../../../images/IMG_4437.jpg'
 
 function Slider () {
+    // var slides = document.querySelectorAll('.slide');
+    // var btns = document.querySelectorAll('.buttn');
+    // let currentSlide = 1;
+
+    // var manualNav = function(manual) {
+    //     slides.forEach((slide) => {
+    //         slide.classList.remove('active');
+    //     })
+
+    //     btns.forEach((buttn) => {
+    //             buttn.classList.remove('active');
+    //          })
+        
+    //     slides[manual].classList.add('active');
+    //     btns[manual].classList.add('active');
+    // }
+    // btns.forEach((buttn, i) => {
+    // buttn.addEventListener("click", () => {
+    //         manualNav(i);
+    //         currentSlide = i;
+    //     });
+    // }); 
+
+    // // auto
+
+    // var repeat = function(activeClass) =>{
+    // let active = document.getElementsByClassName('active');
+    // let i = 1;
+
+
+    //     var repeater = () => {
+    //         setTimeout(function() {
+
+    //             [...active].forEach((activeSlide) => {
+    //                 activeSlide.classList.remove('active')
+
+    //             });
+               
+    //             i = i + 1;
+    //             slides[i].classList.add('active');
+    //             btns[i].classList.add('active');
+    //             if (slides.length == i) {
+    //                 i = 0;
+    //             }
+    //             if (i => slides.length){
+    //                 return;
+    //             }
+    //             repeater();
+    //         }, 10000);
+    //     }
+    //     repeater();
+    // }
+    // repeat();
+
+
+
+
+    
     return(
-        <div className="containerS">
-        <div className="slider">
-            <div className="slides">
-                <input type="radio" name="radio-btn" id="radio1"></input>
-                <input type="radio" name="radio-btn" id="radio2"></input>
-                <input type="radio" name="radio-btn" id="radio3"></input>
-                <input type="radio" name="radio-btn" id="radio4"></input>
+        <body className="containerS">
+            <div className="slider">
 
-                <div className="slide first">
-                    <img src="../../../images/APC_0012.jpg" width ="120" height="90" alt="fish"></img>
+                <div className="slide active">
+                    <img src={Bcrab}  alt="fish"></img>
 
                 </div>
-                <div className="slide">
-                <img src="../../../images/IMG_4435.png" alt="scallops"></img>
+                <div className="slide ">
+                <img src={fish}   alt="fish"></img>
 
                 </div>
-                <div className="slide">
-                <img src="../../../images/APC_0212.jpg" alt=""></img>
+                <div className="slide ">
+                <img src={crableg}    alt="crableg"></img>
 
                 </div>
-                <div className="slide">
-                <img src="../../../images/APC_0212.jpg" alt=""></img>
+                <div className="slide ">
+                <img src={scallop} alt="scallop"></img>
 
                 </div>
 
-
-
-                {/*auto nav  */}
-                <div className="navigation-auto">
-                    <div className="auto-btn1"></div>
-                    <div className="auto-btn2"></div>
-                    <div className="auto-btn3"></div>
-                    <div className="auto-btn4"></div>
+                {/*button */}
+                <div className="navigation">
+                    <div className="buttn active "></div>
+                    <div className="buttn"></div>
+                    <div className="buttn"></div>
+                    <div className="buttn"></div>
                 </div>
-            </div>
-        {/*manua nav  */}
-        <div className="navigation-manual">
-            <label for="radio1" className="manual-btn"></label>
-            <label for="radio2" className="manual-btn"></label>
-            <label for="radio3" className="manual-btn"></label>
-            <label for="radio4" className="manual-btn"></label>
+            
         </div>
-
-        </div>
-        </div>
+        </body>
     )
 
 }
