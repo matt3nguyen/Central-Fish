@@ -5,7 +5,7 @@ import Slider from "./Slider/Slider";
 function Home() {
 	return (
 		<Router>
-		<Hero></Hero>
+		<Slider></Slider>
 		
 		</Router>
 	);

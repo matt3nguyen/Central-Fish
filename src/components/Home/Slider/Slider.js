@@ -5,60 +5,66 @@ import fish from '../../../images/APC_0212.jpg'
 import crableg from '../../../images/APC_0317.jpg'
 import scallop from '../../../images/IMG_4437.jpg'
 
-function Slider () {
-    // var slides = document.querySelectorAll('.slide');
-    // var btns = document.querySelectorAll('.buttn');
-    // let currentSlide = 1;
+class Slider extends React.Component {
+    componentDidMount() {
+        var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.buttn');
+    let currentSlide = 1;
 
-    // var manualNav = function(manual) {
-    //     slides.forEach((slide) => {
-    //         slide.classList.remove('active');
-    //     })
+    var manualNav = function(manual) {
+        slides.forEach((slide) => {
+            slide.classList.remove('active');
+        })
 
-    //     btns.forEach((buttn) => {
-    //             buttn.classList.remove('active');
-    //          })
+        btns.forEach((buttn) => {
+                buttn.classList.remove('active');
+             })
         
-    //     slides[manual].classList.add('active');
-    //     btns[manual].classList.add('active');
-    // }
-    // btns.forEach((buttn, i) => {
-    // buttn.addEventListener("click", () => {
-    //         manualNav(i);
-    //         currentSlide = i;
-    //     });
-    // }); 
-
-    // // auto
-
-    // var repeat = function(activeClass) =>{
-    // let active = document.getElementsByClassName('active');
-    // let i = 1;
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+    }
+    btns.forEach((buttn, i) => {
+    buttn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+        });
+    }); 
 
 
-    //     var repeater = () => {
-    //         setTimeout(function() {
+    ///auto
+        var repeat = function(activeClass){
+        let active = document.getElementsByClassName('active');
+        let i = 1;
+  
+        var repeater = () => {
+          setTimeout(function(){
+            [...active].forEach((activeSlide) => {
+              activeSlide.classList.remove('active');
+            });
+  
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+  
+          if(slides.length == i){
+            i = 0;
+          }
+          if(i >= slides.length){
+            return;
+          }
+          repeater();
+        }, 10000);
+        }
+        repeater();
+      }
+      repeat();
+    }
 
-    //             [...active].forEach((activeSlide) => {
-    //                 activeSlide.classList.remove('active')
+    render() {
+    
+    // auto
 
-    //             });
-               
-    //             i = i + 1;
-    //             slides[i].classList.add('active');
-    //             btns[i].classList.add('active');
-    //             if (slides.length == i) {
-    //                 i = 0;
-    //             }
-    //             if (i => slides.length){
-    //                 return;
-    //             }
-    //             repeater();
-    //         }, 10000);
-    //     }
-    //     repeater();
-    // }
-    // repeat();
+    
 
 
 
@@ -68,7 +74,7 @@ function Slider () {
         <body className="containerS">
             <div className="slider">
 
-                <div className="slide active">
+                <div className="slide active ">
                     <img src={Bcrab}  alt="fish"></img>
 
                 </div>
@@ -97,5 +103,6 @@ function Slider () {
         </body>
     )
 
+}
 }
 export default Slider
