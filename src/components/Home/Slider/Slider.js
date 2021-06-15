@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Slider.css'
 import Bcrab from '../../../images/APC_0124-2.jpg'
 import fish from '../../../images/APC_0212.jpg'
@@ -10,50 +10,55 @@ class Slider extends React.Component {
         var slides = document.querySelectorAll('.slide');
     var btns = document.querySelectorAll('.buttn');
     let currentSlide = 1;
+    let time = 6000;
 
     var manualNav = function(manual) {
         slides.forEach((slide) => {
-            slide.classList.remove('active');
+            slide.classList.remove('running');
         })
 
         btns.forEach((buttn) => {
-                buttn.classList.remove('active');
+                buttn.classList.remove('running');
              })
         
-        slides[manual].classList.add('active');
-        btns[manual].classList.add('active');
+        slides[manual].classList.add('running');
+        btns[manual].classList.add('running');
     }
-    btns.forEach((buttn, i) => {
+    btns.forEach((buttn, n) => {
     buttn.addEventListener("click", () => {
-            manualNav(i);
-            currentSlide = i;
+            manualNav(n);
+            currentSlide = n;
+            console.log(n)
         });
     }); 
 
 
     ///auto
         var repeat = function(activeClass){
-        let active = document.getElementsByClassName('active');
-        let i = 1;
-  
+        let active = document.getElementsByClassName('running');
+        
+        let i = currentSlide;
         var repeater = () => {
+          
           setTimeout(function(){
+            
             [...active].forEach((activeSlide) => {
-              activeSlide.classList.remove('active');
+              activeSlide.classList.remove('running');
             });
   
-          slides[i].classList.add('active');
-          btns[i].classList.add('active');
+          slides[i].classList.add('running');
+          btns[i].classList.add('running');
+          console.log(i)
           i++;
   
-          if(slides.length == i){
+          if(slides.length === i){
             i = 0;
           }
           if(i >= slides.length){
             return;
           }
           repeater();
-        }, 10000);
+        }, time);
         }
         repeater();
       }
@@ -61,20 +66,13 @@ class Slider extends React.Component {
     }
 
     render() {
-    
-    // auto
-
-    
-
-
-
 
     
     return(
-        <body className="containerS">
+        <div className="containerS">
             <div className="slider">
 
-                <div className="slide active ">
+                <div className="slide running">
                     <img src={Bcrab}  alt="fish"></img>
 
                 </div>
@@ -100,7 +98,7 @@ class Slider extends React.Component {
                 </div>
             
         </div>
-        </body>
+        </div>
     )
 
 }

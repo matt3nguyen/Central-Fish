@@ -7,38 +7,8 @@ import Button from "../Button/Button";
 
 function Navbar() {
 	const [click, setClick] = useState(false);
-	const [Blind, setBlind] = useState(false);
 	const handleClick = () => setClick(!click);
 	const closeMobileMenu = () => setClick(false);
-	const [Navbar, setNavbar] = useState(false);
-
-	
-	const onMouseEnter = () => {
-		if(window.innerWidth > 960){
-			setBlind(false);
-		} else {
-			setBlind(true)
-		}
-	};
-		const onMouseLeave = () => {
-			if(window.innerWidth > 960){
-				setBlind(true);
-			} else {
-				setBlind(false)
-			}	
-	
-	};
-	const changeIcon = () => {
-	if(window.innerWidth > 960) {
-		if (window.scrollY >= 10) {
-			setNavbar(false);
-		} else {
-			setNavbar(true);
-		}
-	}
-	};
-
-	window.addEventListener("scroll", changeIcon);
 
 	return (
 		<>

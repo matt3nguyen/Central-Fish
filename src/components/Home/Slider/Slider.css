@@ -1,6 +1,6 @@
 .containerS {
    height: 120vh;
-   background:  #2b46e0;
+   background:  #ccc;
 }
 .slider {
    width: 100%;
@@ -11,12 +11,12 @@
    z-index: 1;
    position: absolute;
    padding: 4% 1% 1% 1%;
-   clip-path: circle(0% at 0 50%);
+   transition: 5s;
+   opacity: 0;
 }
-.active {
-   clip-path: circle(150% at 0 0%);
+.slide.running {
+   opacity: 1;
    transition: 3s;
-   z-index: 1;
  }
 
 .slide img{
